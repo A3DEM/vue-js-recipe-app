@@ -31,6 +31,6 @@
         display: flex;
         justify-content: space-between;
         padding: 20px 45px;
-        border-radius: 20px 20px 0px 0px;
+        border-radius: 20px 30px 0px 0px;
     }
 </style>
