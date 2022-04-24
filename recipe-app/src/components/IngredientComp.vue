@@ -1,6 +1,6 @@
 <template>
     <div class="ingredient">
-        <img src="@/assets/img/bg.jpg" width="40" height="40" alt="Ingrédient 1">
+        <img src="@/assets/img/ingredients/farine.png" width="40" height="40" alt="Ingrédient 1">
         <p>{{title}}</p>
         <div class="ingredient-quantity">
             <p class="ingredient-quantity-amount">{{amount}}</p>
@@ -64,6 +64,27 @@
 
             &-unit {
                 margin-left: 5px;
+            }
+        }
+    }
+
+    @media screen and (min-width: 845px) {
+        .ingredient {
+            flex-direction: column;
+            margin-right: 20px;
+            padding: 8px;
+
+            img {
+                width: 75px;
+                height: 75px;
+            }
+
+            & > p {
+                margin: 0;
+            }
+
+            &-quantity {
+                position: static;
             }
         }
     }
