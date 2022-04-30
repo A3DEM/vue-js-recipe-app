@@ -8,7 +8,7 @@
             </div>
             <div class="name">
                 <label for="name">Nom</label>
-                <input type="text" placeholder="Neggis" name="name" id="name">
+                <input type="text" placeholder="Jaeger" name="name" id="name">
             </div>
             <div class="identifier">
                 <label for="id">Identifiant</label>

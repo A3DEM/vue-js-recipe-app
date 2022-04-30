@@ -4,7 +4,7 @@
             <h1>Se connecter</h1>
             <div class="identifier">
                 <label for="id">Identifiant</label>
-                <input type="text" placeholder="eren@neggis.com" name="id" id="id">
+                <input type="text" placeholder="eren@jaeger.com" name="id" id="id">
             </div>
             <div class="password">
                 <label for="password">Mot de passe</label>
