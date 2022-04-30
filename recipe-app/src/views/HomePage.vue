@@ -6,21 +6,21 @@
         <div class="lastest-recipe">
             <h2>Les recettes du moments</h2>
             <div class="list">
-                <HighlightedRecipe/>
-                <HighlightedRecipe/>
-                <HighlightedRecipe/>
-                <HighlightedRecipe/>
-                <HighlightedRecipe/>
+                <HighlightedRecipe
+                    v-for="reciepe in reciepes" 
+                    :key="reciepe.id" 
+                    :reciepe="reciepe"
+                />
             </div>
         </div>
         <div class="less-caloric">
             <h2>Les recettes les moins caloriques</h2>
             <div class="list">
-                <HighlightedRecipe/>
-                <HighlightedRecipe/>
-                <HighlightedRecipe/>
-                <HighlightedRecipe/>
-                <HighlightedRecipe/>
+                <HighlightedRecipe
+                    v-for="reciepe in reciepes" 
+                    :key="reciepe.id" 
+                    :reciepe="reciepe"
+                />
             </div>
         </div>
     </div>
@@ -28,6 +28,7 @@
 
 <script>
 
+import api from '@/plugins/axios'
 import MenuComp from '@/components/MenuComp.vue';
 import HighlightedRecipe from '@/components/HighlightedRecipe.vue';
 
@@ -37,6 +38,17 @@ import HighlightedRecipe from '@/components/HighlightedRecipe.vue';
             MenuComp,
             HighlightedRecipe,
         },
+        data() {
+            return {
+                reciepes: []
+            }
+        },
+        mounted () {
+            api.get('reciepes?populate=*').then((response) => {
+                this.reciepes = response.data.data
+                console.log(this.reciepes)
+            });
+        },
     }
 </script>
 
@@ -45,6 +57,7 @@ import HighlightedRecipe from '@/components/HighlightedRecipe.vue';
         background-color: #202124;
         color: white;
         padding: 40px 40px 50px 40px;
+        min-height: 100vh;
 
         h1 {
             margin: 0;

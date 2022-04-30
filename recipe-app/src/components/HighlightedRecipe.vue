@@ -1,29 +1,33 @@
 <template>
-    <div class="highlighted-recipe">
-        <h3>Salade César</h3>
-        <p>12 Ingrédients | 5 min. | Facile</p>
-        <p class="energy">752 kcal</p>
+        
+    <div class="highlighted-recipe" :style="'background: linear-gradient(0deg, rgba(32,33,36,1) 0%, rgba(32,33,36,0) 100%), url('+reciepe.attributes.Image.data.attributes.url+');'">
+        <h3>{{reciepe.attributes.Name}}</h3>
+        <p>{{reciepe.attributes.Ingredients.length}} Ingrédients | {{reciepe.attributes.Duration / 60}} min.</p>
+        <p class="energy">{{reciepe.attributes.Energy}} kcal</p>
     </div>
 </template>
 
 <script>
     export default {
-        name:"HighlightedRecipe"
+        name:"HighlightedRecipe",
+        props: {
+            reciepe: {
+                type: Object,
+                required : true
+            }
+        },
     }
 </script>
 
 <style lang="scss" scoped>
     .highlighted-recipe {
-        background: linear-gradient(0deg, rgba(32,33,36,1) 0%, rgba(32,33,36,0) 100%), url("../assets/img/fond.jpg"),;
-        background-size: cover;
-        background-position: center;
         border-radius: 10px;
         height: 230px;
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        padding: 0px 0px 20px 20px;
+        padding: 0px 20px 20px 20px;
         margin-bottom: 30px;
 
         h3 {

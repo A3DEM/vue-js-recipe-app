@@ -1,9 +1,9 @@
 <template>
     <div class="ingredient">
         <img src="@/assets/img/ingredients/farine.png" width="40" height="40" alt="Ingrédient 1">
-        <p>{{title}}</p>
+        <p>{{ingredient.name}}</p>
         <div class="ingredient-quantity">
-            <p class="ingredient-quantity-amount">{{amount}}</p>
+            <p class="ingredient-quantity-amount">{{ingredient.quantity}}</p>
         </div>
     </div>
 </template>
@@ -12,15 +12,12 @@
     export default {
         name : "IngredientComp",
         props: {
-            title: {
-                type: String,
-                default: "title"
-            },
-            amount: {
-                type: Number, 
-                default: 50
+            ingredient: {
+                type: Object,
+                required : true
             }
         },
+        
     }
 </script>
 

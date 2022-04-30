@@ -57,13 +57,12 @@
                 <div class="recipe-content-ingredients">
                     <h2>Ingrédients</h2>
                     <div class="recipe-content-ingredients-list">
-                        <IngredientComp title="Avocat" amount="50 g"/>
-                        <IngredientComp title="Poulet" amount="450 g"/>
-                        <IngredientComp title="Oeuf(s)" amount="5"/>
-                        <IngredientComp title="Salade" amount="150 g"/>
-                        <IngredientComp title="Curry" amount="2 c.à.s"/>
-                        <IngredientComp title="Tomates" amount="5"/>
-                        <IngredientComp title="Citron" amount="1"/>
+                        <IngredientComp
+                            v-for="ingredient in reciepes.attributes.Ingredients"
+                            :key="ingredient.name" 
+                            :title="ingredient.name"
+                            :amount="ingredient.quantity"
+                        />
                     </div>
                 </div>
                 <div class="recipe-content-steps">
@@ -132,12 +131,24 @@
 
 <script>
 
+import api from '@/plugins/axios'
 import IngredientComp from "../components/IngredientComp.vue"
 
     export default {
         name:"RecipePage",
         components: {
             IngredientComp,
+        },
+        data() {
+            return {
+                reciepes: []
+            }
+        },
+        mounted () {
+            api.get('reciepes?populate=*').then((response) => {
+                this.reciepes = response.data.data
+                console.log(this.reciepes)
+            });
         },
     }
 </script>
