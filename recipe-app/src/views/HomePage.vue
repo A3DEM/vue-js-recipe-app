@@ -11,11 +11,33 @@
                     :key="reciepe.id" 
                     :reciepe="reciepe"
                 />
+                <!-- Duplication pour avoir + de recettes -->
+                <HighlightedRecipe
+                    v-for="reciepe in reciepes" 
+                    :key="reciepe.id" 
+                    :reciepe="reciepe"
+                />
+                <HighlightedRecipe
+                    v-for="reciepe in reciepes" 
+                    :key="reciepe.id" 
+                    :reciepe="reciepe"
+                />
             </div>
         </div>
         <div class="less-caloric">
             <h2>Les recettes les moins caloriques</h2>
             <div class="list">
+                <HighlightedRecipe
+                    v-for="reciepe in reciepes" 
+                    :key="reciepe.id" 
+                    :reciepe="reciepe"
+                />
+                <!-- Duplication pour avoir + de recettes -->
+                <HighlightedRecipe
+                    v-for="reciepe in reciepes" 
+                    :key="reciepe.id" 
+                    :reciepe="reciepe"
+                />
                 <HighlightedRecipe
                     v-for="reciepe in reciepes" 
                     :key="reciepe.id" 
@@ -46,7 +68,7 @@ import HighlightedRecipe from '@/components/HighlightedRecipe.vue';
         mounted () {
             api.get('reciepes?populate=*').then((response) => {
                 this.reciepes = response.data.data
-                console.log(this.reciepes)
+                console.log(this.reciepes);
             });
         },
     }
@@ -103,10 +125,14 @@ import HighlightedRecipe from '@/components/HighlightedRecipe.vue';
                 grid-template-columns: 1fr 1fr 1fr 1fr;
                 grid-gap: 20px;
 
-                & > :nth-child(1) {
+                & a:nth-child(1) {
                     grid-column: span 2;
                     grid-row: span 2;
                     height: auto;
+
+                    & > :nth-child(1) {
+                        height: 500px;
+                    }
                 }
             }
         }

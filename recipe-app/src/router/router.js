@@ -6,6 +6,8 @@ import SignInPage from "@/views/SignInPage.vue"
 import HomePage from "@/views/HomePage.vue"
 import SearchPage from "@/views/SearchPage.vue"
 import RecipePage from "@/views/RecipePage.vue"
+import ProfilePage from "@/views/ProfilePage.vue"
+import SettingsPage from "@/views/SettingsPage.vue"
 
 const routes = [
     {
@@ -36,12 +38,17 @@ const routes = [
     {
         path: "/profile",
         name: "ProfilePage",
-        component: RecipePage,
+        component: ProfilePage,
     },
     {
         path: "/settings",
         name: "SettingsPage",
-        component: HomePage,
+        component: SettingsPage,
+    },
+    {
+        path: "/recipe/:id",
+        name: "RecipePage",
+        component: RecipePage,
     },
 ]
 

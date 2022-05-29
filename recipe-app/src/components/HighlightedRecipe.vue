@@ -1,10 +1,12 @@
 <template>
         
-    <div class="highlighted-recipe" :style="'background: linear-gradient(0deg, rgba(32,33,36,1) 0%, rgba(32,33,36,0) 100%), url('+reciepe.attributes.Image.data.attributes.url+');'">
-        <h3>{{reciepe.attributes.Name}}</h3>
-        <p>{{reciepe.attributes.Ingredients.length}} Ingrédients | {{reciepe.attributes.Duration / 60}} min.</p>
-        <p class="energy">{{reciepe.attributes.Energy}} kcal</p>
-    </div>
+    <router-link :to="{ path: '/recipe/'+reciepe.id }">
+        <div class="highlighted-recipe" :style="'background: linear-gradient(0deg, rgba(32,33,36,1) 0%, rgba(32,33,36,0) 100%), center / cover url('+reciepe.attributes.Image.data.attributes.url+');'">
+            <h3>{{reciepe.attributes.Name}}</h3>
+            <p>{{reciepe.attributes.Ingredients.length}} Ingrédients | {{reciepe.attributes.Duration / 60}} min.</p>
+            <p class="energy">{{reciepe.attributes.Energy}} kcal</p>
+        </div>
+    </router-link>
 </template>
 
 <script>
@@ -20,6 +22,10 @@
 </script>
 
 <style lang="scss" scoped>
+
+    a {
+        text-decoration: none;
+    }
     .highlighted-recipe {
         border-radius: 10px;
         height: 230px;
@@ -33,6 +39,7 @@
         h3 {
             margin: 0;
             font-size: 24px;
+            color: #c4c4c4;
         }
         p {
             margin: 0;

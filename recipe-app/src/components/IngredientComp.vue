@@ -1,9 +1,10 @@
 <template>
     <div class="ingredient">
-        <img src="@/assets/img/ingredients/farine.png" width="40" height="40" alt="Ingrédient 1">
-        <p>{{ingredient.name}}</p>
+        <!-- S'il y avait une liste d'ingrédients définies, on aurait pu récupérer une image selon l'ingrédient -->
+        <!-- <img src="@/assets/img/ingredients/farine.png" width="40" height="40" alt="Ingrédient 1"> -->
+        <p class="ingredient-title">{{title}}</p>
         <div class="ingredient-quantity">
-            <p class="ingredient-quantity-amount">{{ingredient.quantity}}</p>
+            <p class="ingredient-quantity-amount">{{amount}}</p>
         </div>
     </div>
 </template>
@@ -12,12 +13,15 @@
     export default {
         name : "IngredientComp",
         props: {
-            ingredient: {
-                type: Object,
+            title: {
+                type: String,
+                required : true
+            },
+            amount: {
+                type: [String, Number],
                 required : true
             }
-        },
-        
+        }
     }
 </script>
 
@@ -35,9 +39,12 @@
             border-radius: 10px;
         }
 
-        & > p {
+        &-title {
             margin: 0;
             margin-left: 10px;
+        }
+        &-title::first-letter {
+            text-transform: capitalize;
         }
 
         p {
@@ -65,7 +72,7 @@
         }
     }
 
-    @media screen and (min-width: 845px) {
+    @media screen and (min-width: 425px) {
         .ingredient {
             flex-direction: column;
             margin-right: 20px;
@@ -76,8 +83,9 @@
                 height: 75px;
             }
 
-            & > p {
+            &-title {
                 margin: 0;
+                margin-bottom: 10px;
             }
 
             &-quantity {

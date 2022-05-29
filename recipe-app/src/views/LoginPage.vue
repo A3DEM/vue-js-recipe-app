@@ -12,14 +12,14 @@
             </div>
             <div class="button">
                 <ButtonComp link="/home"/>
-                <p class="forgot">Mot de passe oublié ? <a class="link" href="#">Récupérer votre mot de passe.</a></p>
+                <p class="forgot">Pas de compte ? <router-link class="link" to="/signin">Créez-vous un nouveau compte.</router-link></p>
             </div>
             <div class="other">
                 <p class="or">OU</p>
                 <div class="social-links">
-                    <img src="../assets/img/twitter.svg" alt="Twitter">
-                    <img src="../assets/img/facebook.svg" alt="Facebook">
-                    <img src="../assets/img/google.svg" alt="Google">
+                    <img src="../assets/icon/twitter.svg" alt="Twitter">
+                    <img src="../assets/icon/facebook.svg" alt="Facebook">
+                    <img src="../assets/icon/google.svg" alt="Google">
                 </div>
             </div>
         </div>

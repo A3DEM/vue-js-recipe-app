@@ -25,9 +25,9 @@
             <div class="other">
                 <p class="or">OU</p>
                 <div class="social-links">
-                    <img src="../assets/img/twitter.svg" alt="Twitter">
-                    <img src="../assets/img/facebook.svg" alt="Facebook">
-                    <img src="../assets/img/google.svg" alt="Google">
+                    <img src="../assets/icon/twitter.svg" alt="Twitter">
+                    <img src="../assets/icon/facebook.svg" alt="Facebook">
+                    <img src="../assets/icon/google.svg" alt="Google">
                 </div>
             </div>
         </div>

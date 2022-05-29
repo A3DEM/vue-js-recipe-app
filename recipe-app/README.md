@@ -1,4 +1,4 @@
-# recipe-app
+# Barbiton 🥘
 
 ## Project setup
 ```
