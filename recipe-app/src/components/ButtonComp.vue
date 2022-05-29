@@ -13,13 +13,12 @@
             link: {
                 type: String,
                 default: "/"
-            },
-        },
+            }
+        }
     }
 </script>
 
 <style lang="scss" scoped>
-
     a {
         background-color: #23873F;
         color: white;
@@ -34,6 +33,5 @@
     .outline {
         background-color: #202124;
         border: 2px solid #23873F;
-
     }
 </style>

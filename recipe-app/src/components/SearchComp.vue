@@ -22,23 +22,23 @@
 </script>
 
 <style lang="scss" scoped>
-.search-comp {
-    background-color: #292A2D;
-    border-radius: 10px;
-    padding: 14px 20px;
-    margin: 12px 0px;
-    display: flex;
-    align-items: center;
-    position: relative;
+    .search-comp {
+        background-color: #292A2D;
+        border-radius: 10px;
+        padding: 14px 20px;
+        margin: 12px 0px;
+        display: flex;
+        align-items: center;
+        position: relative;
 
-    p {
-        margin: 0;
-        font-size: 14px;
-    }
+        p {
+            margin: 0;
+            font-size: 14px;
+        }
 
-    img {
-        position: absolute;
-        right: 20px;
+        img {
+            position: absolute;
+            right: 20px;
+        }
     }
-}
 </style>

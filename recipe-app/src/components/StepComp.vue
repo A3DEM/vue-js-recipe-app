@@ -2,9 +2,7 @@
     <div class="recipe-content-step">
         <span class="recipe-step">{{number+1}}</span>
         <!-- Les étapes n'ont pas titres mais en décommentant la ligne il est possible de les ajouter -->
-        <!-- <h3 class="recipe-info-title">
-            Dégustation
-        </h3> -->
+        <!-- <h3 class="recipe-info-title">Dégustation</h3> -->
         <p class="recipe-info-paragraph">
             {{content}}
         </p>
@@ -23,7 +21,7 @@
                 type: Number,
                 required : true
             }
-        },
+        }
     }
 </script>
 

@@ -3,6 +3,8 @@
         <div class="content">
             <h1>Paramètres</h1>
             <p>Ici, vous pouvez gérer les paramètres de l'application.</p>
+
+            <!-- Liste des paramètres de l'application -->
             <div class="settings">
                 <SettingComp type="change-profile" title="Mes profils"/>
                 <SettingComp type="data" title="Mes données"/>
@@ -12,22 +14,22 @@
                 <SettingComp type="power-off" title="Se déconnecter"/>
             </div>
 
+            <!-- Menu -->
             <MenuComp active="settings"/>
         </div>
     </div>
 </template>
 
 <script>
-
-import MenuComp from "@/components/MenuComp.vue"
-import SettingComp from "@/components/SettingComp.vue"
+    import MenuComp from "@/components/MenuComp.vue"
+    import SettingComp from "@/components/SettingComp.vue"
 
     export default {
-        name: "ProfilePage",
+        name: "SettingsPage",
         components: {
             MenuComp,
             SettingComp
-        },
+        }
     }
 </script>
 
@@ -44,11 +46,11 @@ import SettingComp from "@/components/SettingComp.vue"
         bottom: 0;
         left: 0%;
 
-
         h1 {
             margin: 0;
             line-height: 1;
         }
+
         p {
             margin: 0;
             color: #828282;
@@ -79,6 +81,7 @@ import SettingComp from "@/components/SettingComp.vue"
             }
         }
     }
+    
     @media screen and (min-width: 845px) {
         #settings-page {
             padding-left: 200px;

@@ -40,8 +40,8 @@
             active: {
                 type: String,
                 default: 'home'
-            },
-        },
+            }
+        }
     }
 </script>
 
@@ -67,7 +67,6 @@
 
     @media screen and (min-width: 845px) {
         #menu {
-
             top: 0;
             right: unset;
             padding: 50px 30px;

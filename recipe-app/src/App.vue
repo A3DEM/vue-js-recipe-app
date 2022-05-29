@@ -3,20 +3,19 @@
 </template>
 
 <script>
-
-export default {
-
-}
+  export default {
+    name : "App"
+  }
 </script>
 
 <style>
-body {
-  margin: 0;
-  padding: 0;
-}
-#app {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-}
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  #app {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
 </style>

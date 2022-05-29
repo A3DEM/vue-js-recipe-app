@@ -2,42 +2,47 @@
     <div id="login-page">
         <div class="content">
             <h1>Se connecter</h1>
-            <div class="identifier">
-                <label for="id">Identifiant</label>
-                <input type="text" placeholder="eren@jaeger.com" name="id" id="id">
-            </div>
-            <div class="password">
-                <label for="password">Mot de passe</label>
-                <input type="password" placeholder="6+ caractères" name="password" id="password">
-            </div>
-            <div class="button">
-                <ButtonComp link="/home"/>
-                <p class="forgot">Pas de compte ? <router-link class="link" to="/signin">Créez-vous un nouveau compte.</router-link></p>
-            </div>
-            <div class="other">
-                <p class="or">OU</p>
-                <div class="social-links">
-                    <img src="../assets/icon/twitter.svg" alt="Twitter">
-                    <img src="../assets/icon/facebook.svg" alt="Facebook">
-                    <img src="../assets/icon/google.svg" alt="Google">
+
+            <!-- Formulaire de connexion -->
+            <form>
+                <div class="identifier">
+                    <label for="id">Identifiant</label>
+                    <input type="text" placeholder="eren@jaeger.com" name="id" id="id">
                 </div>
-            </div>
+                <div class="password">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" placeholder="6+ caractères" name="password" id="password">
+                </div>
+                <div class="button">
+                    <ButtonComp link="/home"/>
+                    <p class="forgot">Pas de compte ? <router-link class="link" to="/signin">Créez-vous un nouveau compte.</router-link></p>
+                </div>
+                <div class="other">
+                    <p class="or">OU</p>
+                    <div class="social-links">
+                        <img src="../assets/icon/twitter.svg" alt="Twitter">
+                        <img src="../assets/icon/facebook.svg" alt="Facebook">
+                        <img src="../assets/icon/google.svg" alt="Google">
+                    </div>
+                </div>
+            </form>
         </div>
+
+        <!-- Image à droit dans la version desktop -->
         <div class="illustration">
         </div>
     </div>
 </template>
 
 <script>
-import ButtonComp from '@/components/ButtonComp.vue';
+    import ButtonComp from '@/components/ButtonComp.vue';
 
 
-export default {
-    name : "LoginPage",
-    components: {
-        ButtonComp,
-    },
-        
+    export default {
+        name : "LoginPage",
+        components: {
+            ButtonComp,
+        } 
     }
 </script>
 
@@ -108,6 +113,7 @@ export default {
                 position: relative;
                 margin: 10px 0px;
                 font-weight: bold;
+
                 &::before {
                     position: absolute;
                     left: 0;
@@ -117,6 +123,7 @@ export default {
                     width: 40%;
                     height: 2px;
                 }
+                
                 &::after {
                     position: absolute;
                     right: 0;

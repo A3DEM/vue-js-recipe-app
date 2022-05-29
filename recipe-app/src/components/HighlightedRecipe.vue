@@ -1,5 +1,4 @@
-<template>
-        
+<template>    
     <router-link :to="{ path: '/recipe/'+reciepe.id }">
         <div class="highlighted-recipe" :style="'background: linear-gradient(0deg, rgba(32,33,36,1) 0%, rgba(32,33,36,0) 100%), center / cover url('+reciepe.attributes.Image.data.attributes.url+');'">
             <h3>{{reciepe.attributes.Name}}</h3>
@@ -17,12 +16,11 @@
                 type: Object,
                 required : true
             }
-        },
+        }
     }
 </script>
 
 <style lang="scss" scoped>
-
     a {
         text-decoration: none;
     }
@@ -66,7 +64,6 @@
 
     @media screen and (min-width:845px) {
         .highlighted-recipe {
-
             margin-bottom: 0;
         }
     }

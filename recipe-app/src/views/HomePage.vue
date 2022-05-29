@@ -1,8 +1,9 @@
 <template>
     <div id="home">
-        <MenuComp/>
         <h1>Bienvenue</h1>
         <p>Quel plat allez-vous cuisiner aujourd'hui ?</p>
+
+        <!-- Liste des recettes -->
         <div class="lastest-recipe">
             <h2>Les recettes du moments</h2>
             <div class="list">
@@ -11,6 +12,7 @@
                     :key="reciepe.id" 
                     :reciepe="reciepe"
                 />
+
                 <!-- Duplication pour avoir + de recettes -->
                 <HighlightedRecipe
                     v-for="reciepe in reciepes" 
@@ -32,6 +34,7 @@
                     :key="reciepe.id" 
                     :reciepe="reciepe"
                 />
+                
                 <!-- Duplication pour avoir + de recettes -->
                 <HighlightedRecipe
                     v-for="reciepe in reciepes" 
@@ -45,14 +48,16 @@
                 />
             </div>
         </div>
+
+        <!-- Menu -->
+        <MenuComp/>
     </div>
 </template>
 
 <script>
-
-import api from '@/plugins/axios'
-import MenuComp from '@/components/MenuComp.vue';
-import HighlightedRecipe from '@/components/HighlightedRecipe.vue';
+    import api from '@/plugins/axios'
+    import MenuComp from '@/components/MenuComp.vue';
+    import HighlightedRecipe from '@/components/HighlightedRecipe.vue';
 
     export default {
         name: "HomePage",
@@ -67,10 +72,10 @@ import HighlightedRecipe from '@/components/HighlightedRecipe.vue';
         },
         mounted () {
             api.get('reciepes?populate=*').then((response) => {
-                this.reciepes = response.data.data
-                console.log(this.reciepes);
+                this.reciepes = response.data.data;
+                // console.log(this.reciepes);
             });
-        },
+        }
     }
 </script>
 
@@ -86,16 +91,19 @@ import HighlightedRecipe from '@/components/HighlightedRecipe.vue';
             line-height: 1;
             font-size: 32px;
         }
+
         p {
             margin: 0;
             font-size: 14px;
             color: #828282;
         }
+
         h2 {
             margin: 30px 0px 15px 0px;
         }
 
         .less-caloric {
+            
             h2 {
                 margin-top: 18px;
             }
@@ -109,7 +117,6 @@ import HighlightedRecipe from '@/components/HighlightedRecipe.vue';
 
     @media screen and (min-width: 845px) {
         #home {
-
             padding-left: 200px;
             .list {
                 grid-template-columns: 1fr 1fr;

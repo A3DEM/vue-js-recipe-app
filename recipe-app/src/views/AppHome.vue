@@ -11,15 +11,14 @@
 </template>
 
 <script>
+  import ButtonComp from '@/components/ButtonComp.vue';
 
-import ButtonComp from '@/components/ButtonComp.vue';
-
-export default {
-  name: 'HomePage',
-  components: {
-    ButtonComp
+  export default {
+    name: 'AppHome',
+    components: {
+      ButtonComp
+    }
   }
-}
 </script>
 
 <style lang="scss" scoped>

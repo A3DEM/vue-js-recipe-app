@@ -4,6 +4,8 @@
             <h1>Recherche</h1>
             <p>Trouvez de nouvelles recettes</p>
 
+
+            <!-- Barre de recherche -->
             <div class="search-bar">
                 <input type="text" placeholder="Recherchez votre recette">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -11,6 +13,7 @@
                 </svg>
             </div>
 
+            <!-- Filtres et tri -->
             <div class="filter-sort">
                 <div class="filter">
                     <svg width="18" height="25" viewBox="0 0 18 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,6 +35,7 @@
                 </div>
             </div>
 
+            <!-- Trends et dernières recherches -->
             <div class="research">
                 <h2 class="trend-title">Recherches populaires</h2>
                 <div class="trend">
@@ -48,22 +52,23 @@
                     <SearchComp title="Gözleme"/>
                 </div>
             </div>
+
+            <!-- Menu -->
             <MenuComp active="search"/>
         </div>
     </div>
 </template>
 
 <script>
-
-import SearchComp from "@/components/SearchComp.vue"
-import MenuComp from "@/components/MenuComp.vue"
+    import SearchComp from "@/components/SearchComp.vue"
+    import MenuComp from "@/components/MenuComp.vue"
 
     export default {
         name: "SearchPage",
         components: {
             SearchComp,
             MenuComp
-        },
+        }
     }
 </script>
 
@@ -74,16 +79,17 @@ import MenuComp from "@/components/MenuComp.vue"
         padding: 40px;
         padding-bottom: 86px;
 
-
         h1 {
             margin: 0;
             line-height: 1;
         }
+
         p {
             margin: 0;
             color: #828282;
             font-size: 14px;
         }
+
         .content {
             max-width: 530px;
 
@@ -126,6 +132,7 @@ import MenuComp from "@/components/MenuComp.vue"
                         margin-left: 10px;
                     }
                 }
+
                 div:first-child {
                     margin-right: 20px;
                 }
@@ -142,7 +149,6 @@ import MenuComp from "@/components/MenuComp.vue"
 
     @media screen and (min-width: 845px) {
         #search-page {
-
             padding-left: 200px;
         }
     }

@@ -2,50 +2,54 @@
     <div id="sign-in-page">
         <div class="content">
             <h1>S'inscrire</h1>
-            <div class="firstname">
-                <label for="firstname">Prénom</label>
-                <input type="text" placeholder="Eren" name="firstname" id="firstname">
-            </div>
-            <div class="name">
-                <label for="name">Nom</label>
-                <input type="text" placeholder="Jaeger" name="name" id="name">
-            </div>
-            <div class="identifier">
-                <label for="id">Identifiant</label>
-                <input type="text" placeholder="eren@neggis.com" name="id" id="id">
-            </div>
-            <div class="password">
-                <label for="password">Mot de passe</label>
-                <input type="password" placeholder="6+ caractères" name="password" id="password">
-            </div>
-            <div class="button">
-                <ButtonComp link="/home" title="Créer un compte"/>
-                <p class="forgot">Déjà un compte ? <router-link class="link" to="/login">Connectez-vous à votre compte.</router-link> </p>
-            </div>
-            <div class="other">
-                <p class="or">OU</p>
-                <div class="social-links">
-                    <img src="../assets/icon/twitter.svg" alt="Twitter">
-                    <img src="../assets/icon/facebook.svg" alt="Facebook">
-                    <img src="../assets/icon/google.svg" alt="Google">
+
+            <!-- Formulaire d'inscription -->
+            <form>
+                <div class="firstname">
+                    <label for="firstname">Prénom</label>
+                    <input type="text" placeholder="Eren" name="firstname" id="firstname">
                 </div>
-            </div>
+                <div class="name">
+                    <label for="name">Nom</label>
+                    <input type="text" placeholder="Jaeger" name="name" id="name">
+                </div>
+                <div class="identifier">
+                    <label for="id">Identifiant</label>
+                    <input type="text" placeholder="eren@neggis.com" name="id" id="id">
+                </div>
+                <div class="password">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" placeholder="6+ caractères" name="password" id="password">
+                </div>
+                <div class="button">
+                    <ButtonComp link="/home" title="Créer un compte"/>
+                    <p class="forgot">Déjà un compte ? <router-link class="link" to="/login">Connectez-vous à votre compte.</router-link> </p>
+                </div>
+                <div class="other">
+                    <p class="or">OU</p>
+                    <div class="social-links">
+                        <img src="../assets/icon/twitter.svg" alt="Twitter">
+                        <img src="../assets/icon/facebook.svg" alt="Facebook">
+                        <img src="../assets/icon/google.svg" alt="Google">
+                    </div>
+                </div>
+            </form> 
         </div>
+
+        <!-- Image à droit dans la version desktop -->
         <div class="illustration">
         </div>
     </div>
 </template>
 
 <script>
-import ButtonComp from '@/components/ButtonComp.vue';
+    import ButtonComp from '@/components/ButtonComp.vue';
 
-
-export default {
-    name : "SingInPage",
-    components: {
-        ButtonComp,
-    },
-        
+    export default {
+        name : "SingInPage",
+        components: {
+            ButtonComp,
+        }    
     }
 </script>
 
@@ -116,6 +120,7 @@ export default {
                 position: relative;
                 margin: 20px 0px 5px 0px;
                 font-weight: bold;
+
                 &::before {
                     position: absolute;
                     left: 0;
@@ -125,6 +130,7 @@ export default {
                     width: 40%;
                     height: 2px;
                 }
+                
                 &::after {
                     position: absolute;
                     right: 0;

@@ -43,6 +43,7 @@
             margin: 0;
             margin-left: 10px;
         }
+        
         &-title::first-letter {
             text-transform: capitalize;
         }

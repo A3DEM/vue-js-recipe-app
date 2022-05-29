@@ -3,6 +3,8 @@
         <div class="content">
             <h1>Votre profil</h1>
             <p>Ici, vous pouvez gérer les informations de votre compte.</p>
+
+            <!-- Informations sur le profil -->
             <div class="profile">
                 <div class="profile-img">
                     <img src="@/assets/img/profile-pic.jpg" alt="Votre profil" height="250" width="250">
@@ -18,25 +20,24 @@
                 </div>
             </div>
 
+            <!-- Menu -->
             <MenuComp active="profile"/>
         </div>
     </div>
 </template>
 
 <script>
-
-import MenuComp from "@/components/MenuComp.vue"
+    import MenuComp from "@/components/MenuComp.vue"
 
     export default {
         name: "ProfilePage",
         components: {
             MenuComp
-        },
+        }
     }
 </script>
 
 <style lang="scss" scoped>
-
     #profile-page {
         background-color: #202124;
         color: white;
@@ -52,6 +53,7 @@ import MenuComp from "@/components/MenuComp.vue"
             margin: 0;
             line-height: 1;
         }
+
         p {
             margin: 0;
             color: #828282;
@@ -82,6 +84,7 @@ import MenuComp from "@/components/MenuComp.vue"
             }
         }
     }
+
     @media screen and (min-width: 845px) {
         #profile-page {
             padding-left: 200px;
