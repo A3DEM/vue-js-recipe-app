@@ -1,4 +1,8 @@
-# Barbiton 🥘
+# Barbiton | Recettes faciles 🥘
+
+## Project automaticly deployed 👇
+
+[https://c.tenor.com/m1AI0gE7Uq4AAAAC/benzema.gif](https://clever-kringle-b55b7d.netlify.app/)
 
 ## Project setup
 ```
