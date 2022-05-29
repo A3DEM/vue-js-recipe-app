@@ -2,8 +2,9 @@
 
 ## Project automatically deployed 👇
 
-[![benzema](https://user-images.githubusercontent.com/58217204/170877509-ed4bb5e2-62e7-49e6-b8dc-ec7b49ecb9f6.gif)
-](https://clever-kringle-b55b7d.netlify.app/)
+Pour un premier aperçu
+![benzema](https://user-images.githubusercontent.com/58217204/170877509-ed4bb5e2-62e7-49e6-b8dc-ec7b49ecb9f6.gif)
+[Juste ici](https://clever-kringle-b55b7d.netlify.app/)
 
 ## Project setup 🛠️
 ```
